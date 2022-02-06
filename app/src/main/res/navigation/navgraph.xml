@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/loginPage">
+
+    <fragment
+        android:id="@+id/loginPage"
+        android:name="com.example.mylogin.LoginPage"
+        android:label="fragment_login_page"
+        tools:layout="@layout/fragment_login_page" >
+        <action
+            android:id="@+id/action_loginPage_to_registerPage"
+            app:destination="@id/registerPage" />
+        <action
+            android:id="@+id/action_loginPage_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerPage"
+        android:name="com.example.mylogin.RegisterPage"
+        android:label="fragment_register_page"
+        tools:layout="@layout/fragment_register_page" >
+        <action
+            android:id="@+id/action_registerPage_to_loginPage"
+            app:destination="@id/loginPage" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.mylogin.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" >
+        <action
+            android:id="@+id/action_mapsFragment_to_loginPage"
+            app:destination="@id/loginPage" />
+        <action
+            android:id="@+id/action_mapsFragment_to_mapsregister"
+            app:destination="@id/mapsregister" />
+        <action
+            android:id="@+id/action_mapsFragment_to_markerinfo"
+            app:destination="@id/markerinfo" />
+        <action
+            android:id="@+id/action_mapsFragment_to_myProfile"
+            app:destination="@id/myProfile" />
+        <action
+            android:id="@+id/action_mapsFragment_to_sherch"
+            app:destination="@id/sherch" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapsregister"
+        android:name="com.example.mylogin.MapsRegister"
+        android:label="fragment_mapsregister"
+        tools:layout="@layout/fragment_mapsregister" >
+        <action
+            android:id="@+id/action_mapsregister_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/markerinfo"
+        android:name="com.example.mylogin.MarkerInfo"
+        android:label="fragment_markerinfo"
+        tools:layout="@layout/fragment_markerinfo" >
+        <action
+            android:id="@+id/action_markerinfo_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myProfile"
+        android:name="com.example.mylogin.MyProfile"
+        android:label="fragment_my_profile"
+        tools:layout="@layout/fragment_my_profile" />
+    <fragment
+        android:id="@+id/sherch"
+        android:name="com.example.mylogin.sherch"
+        android:label="fragment_sherch"
+        tools:layout="@layout/fragment_sherch" />
+</navigation>
